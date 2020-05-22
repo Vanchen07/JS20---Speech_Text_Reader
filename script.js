@@ -4,3 +4,10 @@ const textarea = document.getElementById('text');
 const readBtn = document.getElementById('read');
 const toggleBtn = document.getElementById('toggle');
 const closeBtn = document.getElementById('close');
+
+const data = [
+    {
+        image: './img/drink.jpg',
+        text: "I'm Thirsty",
+    }
+];
