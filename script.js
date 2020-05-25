@@ -117,4 +117,9 @@ closeBtn.addEventListener('click', () => document.getElementById('text-box').cla
 
 voicesSelect.addEventListener('change', setVoice);
 
+readBtn.addEventListener('click', () => {
+    setTextMessage(textarea.value);
+    speakText();
+});
+
 getVoices();
