@@ -80,6 +80,8 @@ function createBox(item) {
     main.appendChild(box);
 }
 
+const message = new SpeechSynthesisUtterance();
+
 let voices =[];
 
 function getVoices() {
@@ -93,6 +95,14 @@ function getVoices() {
 
         voicesSelect.appendChild(option);
     })
+}
+
+function setTextMessage(text) {
+    message.text = tex;
+}
+
+function speakText() {
+    speechSynthesis.speak(message);
 }
 
 speechSynthesis.addEventListener('voiceschanged', getVoices);
