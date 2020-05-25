@@ -69,6 +69,14 @@ function createBox(item) {
         <p class="info">${text}</p>
     `;
 
+    box.addEventListener('click', () => {
+        setTextMessage(text);
+        speakText();
+
+        box.classList.add('active');
+        setTimeout(() => box.classList.remove('active'), 800);
+    })
+
     main.appendChild(box);
 }
 
