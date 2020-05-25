@@ -98,7 +98,7 @@ function getVoices() {
 }
 
 function setTextMessage(text) {
-    message.text = tex;
+    message.text = text;
 }
 
 function speakText() {
@@ -110,5 +110,7 @@ speechSynthesis.addEventListener('voiceschanged', getVoices);
 toggleBtn.addEventListener('click', () => document.getElementById('text-box').classList.toggle('show'));
 
 closeBtn.addEventListener('click', () => document.getElementById('text-box').classList.remove('show'));
+
+voicesSelect.addEventListener('change', setVoice);
 
 getVoices();
